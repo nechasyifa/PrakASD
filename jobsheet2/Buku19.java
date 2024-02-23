@@ -26,6 +26,26 @@ public class Buku19 {
         harga = hrg;
     }
 
+    int hitungHargaTotal(int jmlTerjual) {
+        return harga * jmlTerjual;
+    }
+
+    double hitungDiskon(int hrgTotal) {
+        if (hrgTotal > 150000) {
+            return 0.12;
+        } else if (hrgTotal <= 150000 || hrgTotal >= 75000) {
+            return 0.05;
+        } else {
+            return 0.0;
+        }
+    }
+
+    double hitungHargaBayar(int jmlTerjual) {
+        int hrgTotal = hitungHargaTotal(jmlTerjual);
+        double diskon = hitungDiskon(hrgTotal);
+        return hrgTotal - (hrgTotal * diskon);
+    }
+
     public Buku19() {
 
     }
