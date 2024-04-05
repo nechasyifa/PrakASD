@@ -48,4 +48,13 @@ public class PencarianBuku19 {
             System.out.println("data " + x + " tidak ditemukan");
         }
     }
+
+    public Buku19 FindBuku(int cari) {
+        for (Buku19 buku : listBk) {
+            if (buku.kodeBuku == cari) {
+                return buku;
+            }
+        }
+        return null;
+    }
 }
