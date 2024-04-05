@@ -36,10 +36,11 @@ public class BukuMain19 {
 
         System.out.println("_________________________________________________________");
         System.out.println("_________________________________________________________");
-        System.out.println("Pencarian Data : ");
-        System.out.println("Masukkan Kode Buku yang dicari : ");
-        System.out.print("Kode Buku : ");
+        System.out.println("Pencarian Data Judul Buku: ");
+        System.out.println("Masukkan Judul Buku yang dicari : ");
+        System.out.print("Judul Buku : ");
         String cari = s1.nextLine();
+        data.pencarianJudulBuku(cari);
         int posisi = data.FindSeqSearch(cari);
         data.TampilPosisi(cari, posisi);
         System.out.println("Menggunakan Sequential Search : ");
