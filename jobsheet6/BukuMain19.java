@@ -51,5 +51,11 @@ public class BukuMain19 {
         } else {
             System.out.println("Buku dengan kode " + cari + " tidak ditemukan");
         }
+
+        System.out.println("=======================================");
+        System.out.println("Menggunakan Binary Search");
+        posisi = data.FindBinarySearch(cari, 0, jmlBuku - 1);
+        data.TampilPosisi(cari, posisi);
+        data.tampilData(cari, posisi);
     }
 }
