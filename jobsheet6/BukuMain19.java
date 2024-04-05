@@ -17,7 +17,7 @@ public class BukuMain19 {
         for (int i = 0; i < jmlBuku; i++) {
             System.out.println("_________________________________________________________");
             System.out.print("Kode Buku \t : ");
-            int kodeBuku = s.nextInt();
+            String kodeBuku = s1.nextLine();
             System.out.print("Judul Buku \t : ");
             String judulBuku = s1.nextLine();
             System.out.print("Tahun Terbit \t : ");
@@ -39,7 +39,7 @@ public class BukuMain19 {
         System.out.println("Pencarian Data : ");
         System.out.println("Masukkan Kode Buku yang dicari : ");
         System.out.print("Kode Buku : ");
-        int cari = s.nextInt();
+        String cari = s1.nextLine();
         int posisi = data.FindSeqSearch(cari);
         data.TampilPosisi(cari, posisi);
         System.out.println("Menggunakan Sequential Search : ");
