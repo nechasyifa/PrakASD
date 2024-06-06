@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class GraphMain19 {
     public static void main(String[] args) throws Exception {
         Graph19 gedung = new Graph19(6);
@@ -12,5 +14,18 @@ public class GraphMain19 {
 
         gedung.removeEdge(1,3);
         gedung.printGraph();
+
+        Scanner scanner19 = new Scanner(System.in);
+        
+        System.out.print("Masukkan gedung asal: ");
+        int asal = scanner19.nextInt();
+        System.out.print("Masukkan gedung tujuan: ");
+        int tujuan = scanner19.nextInt();
+
+        if (gedung.cekJalur(asal, tujuan)) {
+            System.out.println("Gedung " + (char) ('A' + asal) + " dan " + (char) ('A' + tujuan) + " bertetangga");
+        } else {
+            System.out.println("Gedung " + (char) ('A' + asal) + " dan " + (char) ('A' + tujuan) + " tidak bertetangga");
+        }
     }
 }

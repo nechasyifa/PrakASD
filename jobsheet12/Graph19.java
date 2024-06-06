@@ -55,4 +55,31 @@ public class Graph19 {
         }
         System.out.println("");
     }
-}
+
+    public boolean cekJalur(int asal, int tujuan) throws Exception {
+        boolean[] visited = new boolean[vertex];
+        if (list[asal].size() > 0 && list[asal].getFirst() == tujuan) {
+            return true;
+        } else {
+            return !cekKeterhubungan(asal, tujuan, visited);
+        }
+    }
+    
+    public boolean cekKeterhubungan(int asal, int tujuan, boolean[] visited) throws Exception {
+        if (asal == tujuan)
+            return false;
+    
+        visited[asal] = true;
+        for (int i = 0; i < list[asal].size(); i++) {
+            int neighbor = list[asal].get(i);
+            if (!visited[neighbor]) {
+                if (neighbor == tujuan)
+                    return true;
+                if (!cekKeterhubungan(neighbor, tujuan, visited)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+}    
