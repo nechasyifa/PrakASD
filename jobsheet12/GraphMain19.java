@@ -13,8 +13,12 @@ public class GraphMain19 {
         System.out.println("Hasil setelah penghapusan edge");
         gdg.removeEdge(2, 1);
         gdg.printGraph();
-
+        
         System.out.println();
+
+        for (int i = 0; i < 4; i++) {
+            gdg.Degree(i);
+        }
 
         Graph19 gedung = new Graph19(6);
         gedung.addEdge(0, 1, 50);
